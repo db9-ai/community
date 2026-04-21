@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord
+    url: https://discord.gg/5P3RuyZCgs
+    about: Chat with the community and get real-time help
+  - name: Documentation
+    url: https://db9.ai/docs/overview
+    about: Read the docs before opening an issue

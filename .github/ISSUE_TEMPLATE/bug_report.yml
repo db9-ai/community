@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a bug in DB9
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill out the sections below so we can reproduce and fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug.
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to reproduce the behavior.
+      placeholder: |
+        1. Run `db9 ...`
+        2. Execute query `...`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of DB9 is affected?
+      options:
+        - CLI
+        - SDK (get-db9)
+        - SQL / Query Engine
+        - Extensions (fs9, vector, http, pg_cron, etc.)
+        - Branching
+        - Dashboard / Web
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version, DB9 CLI version, SDK version, etc.
+      placeholder: |
+        - OS: macOS 15.3
+        - Node: v22.0.0
+        - db9 CLI: 0.4.2
+        - get-db9 SDK: 0.3.1
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error output
+      description: Paste any relevant error messages or logs.
+      render: shell
