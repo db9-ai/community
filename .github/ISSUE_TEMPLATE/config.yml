@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Report a security vulnerability privately
+    url: https://github.com/db9-ai/community/security/policy
+    about: Do not post vulnerabilities or credentials in a public issue. Read the policy and contact security@db9.ai privately.
   - name: Discord
     url: https://discord.gg/5P3RuyZCgs
     about: Chat with the community and get real-time help
