@@ -5,6 +5,10 @@ body:
   - type: markdown
     attributes:
       value: |
+        **This is a public issue.** For suspected vulnerabilities, stop here and use [security@db9.ai](mailto:security@db9.ai). See the [security reporting policy](https://github.com/db9-ai/community/security/policy).
+
+        Remove passwords, API tokens, connection strings, session cookies, private keys, and customer data from text, logs, SQL, screenshots, URLs, and attachments. Use fictional data. This form does not automatically redact content.
+
         Thanks for reporting a bug. Please fill out the sections below so we can reproduce and fix it.
 
   - type: textarea
@@ -20,7 +24,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce
-      description: Minimal steps to reproduce the behavior.
+      description: Minimal steps using test data. Replace credentials, private URLs, and real customer values with placeholders.
       placeholder: |
         1. Run `db9 ...`
         2. Execute query `...`
@@ -57,7 +61,7 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: OS, Node.js version, DB9 CLI version, SDK version, etc.
+      description: OS, Node.js version, DB9 CLI version, SDK version, etc. Do not paste your environment-variable file or credentials.
       placeholder: |
         - OS: macOS 15.3
         - Node: v22.0.0
@@ -68,5 +72,13 @@ body:
     id: logs
     attributes:
       label: Logs / Error output
-      description: Paste any relevant error messages or logs.
+      description: Only the relevant, redacted error lines. Remove tokens, passwords, connection strings, cookies, private keys, and customer data before pasting.
       render: shell
+
+  - type: checkboxes
+    id: public-report-check
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed secrets and customer data, and this is not a private vulnerability report.
+          required: true

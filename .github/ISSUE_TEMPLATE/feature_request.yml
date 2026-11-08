@@ -5,6 +5,10 @@ body:
   - type: markdown
     attributes:
       value: |
+        **This is a public issue.** For suspected vulnerabilities, stop here and use [security@db9.ai](mailto:security@db9.ai). See the [security reporting policy](https://github.com/db9-ai/community/security/policy).
+
+        Remove passwords, API tokens, connection strings, session cookies, private keys, and customer data from text, logs, SQL, screenshots, URLs, and attachments. Use fictional data. This form does not automatically redact content.
+
         We'd love to hear your ideas for improving DB9.
 
   - type: textarea
@@ -52,4 +56,12 @@ body:
     id: context
     attributes:
       label: Additional context
-      description: Screenshots, links, or anything else relevant.
+      description: Redacted screenshots, public links, or other relevant context. Remove credentials and customer data from all attachments.
+
+  - type: checkboxes
+    id: public-report-check
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed secrets and customer data, and this is not a private vulnerability report.
+          required: true
